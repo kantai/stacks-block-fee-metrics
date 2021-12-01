@@ -1,0 +1,2044 @@
+{
+  "limit": 96,
+  "offset": 0,
+  "results": [
+    {
+      "tx_id": "0xf63306365ba0a1d68043a20f1ac4aecd2bb9e75534a09f26cc4e04a58ca5ea24",
+      "nonce": 116,
+      "fee_rate": "2000000",
+      "sender_address": "SPKTFS7QGESCFZJ08PCDVZT66601MTFYVTT8MW05",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 0,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 32,
+      "execution_cost_read_length": 59563,
+      "execution_cost_runtime": 99438000,
+      "execution_cost_write_count": 5,
+      "execution_cost_write_length": 459,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP2H8PY27SEZ03MWRKS5XABZYQN17ETGQS3527SA5.newyorkcitycoin-core-v1",
+        "function_name": "claim-mining-reward",
+        "function_signature": "(define-public (claim-mining-reward (minerBlockHeight uint)))",
+        "function_args": [
+          {
+            "hex": "0x01000000000000000000000000000099fc",
+            "repr": "u39420",
+            "name": "minerBlockHeight",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x07e297088e31d7de03197e4f87753e805b8b63abfc3f96b25271b1c97a77ef6d",
+      "nonce": 11,
+      "fee_rate": "70000",
+      "sender_address": "SP322F1TCGFP3SZTV6735R8B0C10SCRXQS39BNTJ2",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 9,
+      "tx_status": "abort_by_response",
+      "tx_result": {
+        "hex": "0x080100000000000000000000000000000066",
+        "repr": "(err u102)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 0,
+      "events": [],
+      "execution_cost_read_count": 308,
+      "execution_cost_read_length": 17799,
+      "execution_cost_runtime": 51523000,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP32AEEF6WW5Y0NMJ1S8SBSZDAY8R5J32NBZFPKKZ.free-punks-v0",
+        "function_name": "mint",
+        "function_signature": "(define-public (mint (punk-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x0100000000000000000000000000000000",
+            "repr": "u0",
+            "name": "punk-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x69a62be7bfd48225ed0821b7ff0a6668cd3d955bfce70fc675e4f29fdbb0c64c",
+      "nonce": 265,
+      "fee_rate": "150000",
+      "sender_address": "SP7E34QCWBZKMWMAHZJ7GEYYZR10986KAVPPZWYZ",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "stx",
+          "condition_code": "sent_less_than_or_equal_to",
+          "amount": "28000000",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP7E34QCWBZKMWMAHZJ7GEYYZR10986KAVPPZWYZ"
+          }
+        },
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "stacks-art-market-v2",
+            "address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset": {
+            "contract_name": "funky-donuts",
+            "asset_name": "funky-donuts",
+            "contract_address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset_value": {
+            "hex": "0x01000000000000000000000000000009d7",
+            "repr": "u2519"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 10,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 5,
+      "events": [],
+      "execution_cost_read_count": 20,
+      "execution_cost_read_length": 24781,
+      "execution_cost_runtime": 34825000,
+      "execution_cost_write_count": 5,
+      "execution_cost_write_length": 87,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-art-market-v2",
+        "function_name": "buy-item",
+        "function_signature": "(define-public (buy-item (collection trait_reference) (collection-id uint) (item-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x061625c0f5c23a3d463bd4ead1f7c2548a3fb529cdb00c66756e6b792d646f6e757473",
+            "repr": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.funky-donuts",
+            "name": "collection",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x010000000000000000000000000000000b",
+            "repr": "u11",
+            "name": "collection-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x01000000000000000000000000000009d7",
+            "repr": "u2519",
+            "name": "item-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xa04f9ce03d689ed5dad51e89de1887577042c0b0e5aca794e124bb4ff2ca83e2",
+      "nonce": 209,
+      "fee_rate": "140000",
+      "sender_address": "SPARY4CC51FEVDRRCJPS8S2RV9BNC5RKYC1N6Z2D",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SPARY4CC51FEVDRRCJPS8S2RV9BNC5RKYC1N6Z2D"
+          },
+          "asset": {
+            "contract_name": "stacks-punks-v3",
+            "asset_name": "stacks-punks",
+            "contract_address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset_value": {
+            "hex": "0x0100000000000000000000000000000c01",
+            "repr": "u3073"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 11,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 24,
+      "execution_cost_read_length": 206349,
+      "execution_cost_runtime": 516099000,
+      "execution_cost_write_count": 7,
+      "execution_cost_write_length": 184809,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-punks-market",
+        "function_name": "list-punk",
+        "function_signature": "(define-public (list-punk (punk-id uint) (price uint)))",
+        "function_args": [
+          {
+            "hex": "0x0100000000000000000000000000000c01",
+            "repr": "u3073",
+            "name": "punk-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000008583b00",
+            "repr": "u140000000",
+            "name": "price",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x05eeb495ec7dd44fa83b11957f4a8fa93e4b62b9acd14350d7c3a5cc11e8c14a",
+      "nonce": 364,
+      "fee_rate": "115587",
+      "sender_address": "SP15W83Y5K9X0H96RGX050GX2YFXVFCZTKAAT00H5",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "stacks-art-market-v2",
+            "address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset": {
+            "contract_name": "funky-donuts",
+            "asset_name": "funky-donuts",
+            "contract_address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset_value": {
+            "hex": "0x01000000000000000000000000000002b4",
+            "repr": "u692"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 12,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 2,
+      "events": [],
+      "execution_cost_read_count": 13,
+      "execution_cost_read_length": 20359,
+      "execution_cost_runtime": 25054000,
+      "execution_cost_write_count": 2,
+      "execution_cost_write_length": 84,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-art-market-v2",
+        "function_name": "unlist-item",
+        "function_signature": "(define-public (unlist-item (collection trait_reference) (collection-id uint) (item-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x061625c0f5c23a3d463bd4ead1f7c2548a3fb529cdb00c66756e6b792d646f6e757473",
+            "repr": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.funky-donuts",
+            "name": "collection",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x010000000000000000000000000000000b",
+            "repr": "u11",
+            "name": "collection-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x01000000000000000000000000000002b4",
+            "repr": "u692",
+            "name": "item-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xe7a6a131d8e636c601ceac25f5db0c8ab9baa42cc0cd49823340a24c92289e8b",
+      "nonce": 267,
+      "fee_rate": "127352",
+      "sender_address": "SPMH8TX6ZB5RNJC4CHR1K65T2A63NRK17VK717B0",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SPMH8TX6ZB5RNJC4CHR1K65T2A63NRK17VK717B0"
+          },
+          "asset": {
+            "contract_name": "stacks-pops",
+            "asset_name": "stacks-pops",
+            "contract_address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset_value": {
+            "hex": "0x01000000000000000000000000000009dc",
+            "repr": "u2524"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 13,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 2,
+      "events": [],
+      "execution_cost_read_count": 23,
+      "execution_cost_read_length": 106978,
+      "execution_cost_runtime": 273974000,
+      "execution_cost_write_count": 6,
+      "execution_cost_write_length": 80754,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-art-market-v2",
+        "function_name": "list-item",
+        "function_signature": "(define-public (list-item (collection trait_reference) (collection-id uint) (item-id uint) (price uint)))",
+        "function_args": [
+          {
+            "hex": "0x061625c0f5c23a3d463bd4ead1f7c2548a3fb529cdb00b737461636b732d706f7073",
+            "repr": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-pops",
+            "name": "collection",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000003",
+            "repr": "u3",
+            "name": "collection-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x01000000000000000000000000000009dc",
+            "repr": "u2524",
+            "name": "item-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x010000000000000000000000000101dfa0",
+            "repr": "u16900000",
+            "name": "price",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x4066407d68d767dd2a59e1a46122cb50047ebe214c616d58745df0ae3885be2b",
+      "nonce": 31,
+      "fee_rate": "124287",
+      "sender_address": "SP10KNQQVN9186XY115CQQXW309PJMTC70DKG8Z2W",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "stx",
+          "condition_code": "sent_equal_to",
+          "amount": "2000000",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP10KNQQVN9186XY115CQQXW309PJMTC70DKG8Z2W"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 14,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x070100000000000000000000000000009b02",
+        "repr": "(ok u39682)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 8,
+      "execution_cost_read_length": 42127,
+      "execution_cost_runtime": 42746000,
+      "execution_cost_write_count": 2,
+      "execution_cost_write_length": 334,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP000000000000000000002Q6VF78.bns",
+        "function_name": "name-preorder",
+        "function_signature": "(define-public (name-preorder (hashed-salted-fqn (buff 20)) (stx-to-burn uint)))",
+        "function_args": [
+          {
+            "hex": "0x02000000149af0d83cefaca7df626e25f2dd2800d86b527eab",
+            "repr": "0x9af0d83cefaca7df626e25f2dd2800d86b527eab",
+            "name": "hashed-salted-fqn",
+            "type": "(buff 20)"
+          },
+          {
+            "hex": "0x01000000000000000000000000001e8480",
+            "repr": "u2000000",
+            "name": "stx-to-burn",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xf393adc834f32c63bedf99949e35aaeb061734679e1b10bf5e717089ff4f4381",
+      "nonce": 640,
+      "fee_rate": "120000",
+      "sender_address": "SP262CK3VPG6PDF4S96TTXFBVV9Y9Z75F51A6G83N",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP262CK3VPG6PDF4S96TTXFBVV9Y9Z75F51A6G83N"
+          },
+          "asset": {
+            "contract_name": "bitcoin-monkeys",
+            "asset_name": "bitcoin-monkeys",
+            "contract_address": "SP2KAF9RF86PVX3NEE27DFV1CQX0T4WGR41X3S45C"
+          },
+          "asset_value": {
+            "hex": "0x0100000000000000000000000000000902",
+            "repr": "u2306"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 15,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 17,
+      "execution_cost_read_length": 66480,
+      "execution_cost_runtime": 70564000,
+      "execution_cost_write_count": 2,
+      "execution_cost_write_length": 685,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S.marketplace-v4",
+        "function_name": "list-asset",
+        "function_signature": "(define-public (list-asset (tradables trait_reference) (tradable-id uint) (price uint) (commission uint)))",
+        "function_args": [
+          {
+            "hex": "0x0616a6a7a70f41adbe8eae708ed7ec2cbf41a27218200f626974636f696e2d6d6f6e6b657973",
+            "repr": "SP2KAF9RF86PVX3NEE27DFV1CQX0T4WGR41X3S45C.bitcoin-monkeys",
+            "name": "tradables",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000902",
+            "repr": "u2306",
+            "name": "tradable-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000005b8d800",
+            "repr": "u96000000",
+            "name": "price",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000064",
+            "repr": "u100",
+            "name": "commission",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xe6687b3df3a68a732fb6bbb14d7b7ae9ba3536928ff706cb0fb8ddb45647ed71",
+      "nonce": 195,
+      "fee_rate": "59729",
+      "sender_address": "SP12QK2PQZXTWPF3K9ES0MA51JW17KXMBYG3W2V9M",
+      "sponsored": false,
+      "post_condition_mode": "allow",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 16,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x070b000000020100000000000000000000000000ea70120100000000000000000000000001ba8140",
+        "repr": "(ok (list u15364114 u29000000))"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 8,
+      "events": [],
+      "execution_cost_read_count": 30,
+      "execution_cost_read_length": 58745,
+      "execution_cost_runtime": 71676000,
+      "execution_cost_write_count": 8,
+      "execution_cost_write_length": 985,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-swap-v2-1",
+        "function_name": "swap-y-for-x",
+        "function_signature": "(define-public (swap-y-for-x (token-x-trait trait_reference) (token-y-trait trait_reference) (dy uint) (min-dx uint)))",
+        "function_args": [
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a511777261707065642d7374782d746f6b656e",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.wrapped-stx-token",
+            "name": "token-x-trait",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a50e61726b6164696b6f2d746f6b656e",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-token",
+            "name": "token-y-trait",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0100000000000000000000000001ba8140",
+            "repr": "u29000000",
+            "name": "dy",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000000e10f6e",
+            "repr": "u14749550",
+            "name": "min-dx",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x546cbf0301079147f825150bacc0b921c53972d7eead8c2a31b7c0544caa4e74",
+      "nonce": 288,
+      "fee_rate": "110848",
+      "sender_address": "SP3H2TDA41FD8MSVE73MHTEF75M4JDF7KR6XAXSZB",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "marketplace-v4",
+            "address": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S"
+          },
+          "asset": {
+            "contract_name": "btc-badgers",
+            "asset_name": "btc-badgers-nft",
+            "contract_address": "SP38FN88VZ97GWV0E8THXRM6Z5VMFPHFY4J1JEC5S"
+          },
+          "asset_value": {
+            "hex": "0x01000000000000000000000000000000df",
+            "repr": "u223"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 17,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 14,
+      "execution_cost_read_length": 69689,
+      "execution_cost_runtime": 74297000,
+      "execution_cost_write_count": 4,
+      "execution_cost_write_length": 546,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S.marketplace-v4",
+        "function_name": "unlist-asset",
+        "function_signature": "(define-public (unlist-asset (tradables trait_reference) (tradable-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x0616d0faa11bfa4f0e6c0e46a3dc50df2ee8fb45fe240b6274632d62616467657273",
+            "repr": "SP38FN88VZ97GWV0E8THXRM6Z5VMFPHFY4J1JEC5S.btc-badgers",
+            "name": "tradables",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x01000000000000000000000000000000df",
+            "repr": "u223",
+            "name": "tradable-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xdb557181d7c4e7358db7b61a39c7bc809051887c13e3b823db253aecf9f84a2b",
+      "nonce": 69,
+      "fee_rate": "59264",
+      "sender_address": "SPKSM9X2H23RKDRF9XKWCA2TN85M0FEARX3NJ1VR",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 18,
+      "tx_status": "abort_by_response",
+      "tx_result": {
+        "hex": "0x080100000000000000000000000000000066",
+        "repr": "(err u102)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 0,
+      "events": [],
+      "execution_cost_read_count": 308,
+      "execution_cost_read_length": 17799,
+      "execution_cost_runtime": 51523000,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP32AEEF6WW5Y0NMJ1S8SBSZDAY8R5J32NBZFPKKZ.free-punks-v0",
+        "function_name": "mint",
+        "function_signature": "(define-public (mint (punk-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x0100000000000000000000000000000000",
+            "repr": "u0",
+            "name": "punk-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x011f0d0614d7555003cec2e87e7d53aa6ae26999a46b26c2f8502bdbb80c1d24",
+      "nonce": 18,
+      "fee_rate": "2000000",
+      "sender_address": "SP1F7JGXJFJCBVST3GWNN0W5KCRC2W4K9S9N1Y4B7",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "not_sent",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP1F7JGXJFJCBVST3GWNN0W5KCRC2W4K9S9N1Y4B7"
+          },
+          "asset": {
+            "contract_name": "bitcoin-monkeys",
+            "asset_name": "bitcoin-monkeys",
+            "contract_address": "SP2KAF9RF86PVX3NEE27DFV1CQX0T4WGR41X3S45C"
+          },
+          "asset_value": {
+            "hex": "0x010000000000000000000000000000079c",
+            "repr": "u1948"
+          }
+        },
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "marketplace-v4",
+            "address": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S"
+          },
+          "asset": {
+            "contract_name": "bitcoin-monkeys",
+            "asset_name": "bitcoin-monkeys",
+            "contract_address": "SP2KAF9RF86PVX3NEE27DFV1CQX0T4WGR41X3S45C"
+          },
+          "asset_value": {
+            "hex": "0x010000000000000000000000000000079c",
+            "repr": "u1948"
+          }
+        },
+        {
+          "type": "stx",
+          "condition_code": "sent_less_than_or_equal_to",
+          "amount": "49000000",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP1F7JGXJFJCBVST3GWNN0W5KCRC2W4K9S9N1Y4B7"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 2,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 4,
+      "events": [],
+      "execution_cost_read_count": 13,
+      "execution_cost_read_length": 46382,
+      "execution_cost_runtime": 51077000,
+      "execution_cost_write_count": 5,
+      "execution_cost_write_length": 219,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S.marketplace-v4",
+        "function_name": "purchase-asset",
+        "function_signature": "(define-public (purchase-asset (tradables trait_reference) (tradable-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x0616a6a7a70f41adbe8eae708ed7ec2cbf41a27218200f626974636f696e2d6d6f6e6b657973",
+            "repr": "SP2KAF9RF86PVX3NEE27DFV1CQX0T4WGR41X3S45C.bitcoin-monkeys",
+            "name": "tradables",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x010000000000000000000000000000079c",
+            "repr": "u1948",
+            "name": "tradable-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xad6799127bf4092759afe5a1f5e49806a34d1da1e2056f8e8119c8ee72d96bb8",
+      "nonce": 75,
+      "fee_rate": "177000",
+      "sender_address": "SPR05GHB99HGWD5HAS39XPP7ZZJ5KYHFG6YCNPFN",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SPR05GHB99HGWD5HAS39XPP7ZZJ5KYHFG6YCNPFN"
+          },
+          "asset": {
+            "contract_name": "citadels",
+            "asset_name": "citadels",
+            "contract_address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset_value": {
+            "hex": "0x010000000000000000000000000000023e",
+            "repr": "u574"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 3,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 2,
+      "events": [],
+      "execution_cost_read_count": 16,
+      "execution_cost_read_length": 24226,
+      "execution_cost_runtime": 28465000,
+      "execution_cost_write_count": 3,
+      "execution_cost_write_length": 365,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-art-market-v2",
+        "function_name": "list-item",
+        "function_signature": "(define-public (list-item (collection trait_reference) (collection-id uint) (item-id uint) (price uint)))",
+        "function_args": [
+          {
+            "hex": "0x061625c0f5c23a3d463bd4ead1f7c2548a3fb529cdb0086369746164656c73",
+            "repr": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.citadels",
+            "name": "collection",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000009",
+            "repr": "u9",
+            "name": "collection-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x010000000000000000000000000000023e",
+            "repr": "u574",
+            "name": "item-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x01000000000000000000000000004c4b40",
+            "repr": "u5000000",
+            "name": "price",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xdb99686527902aec6296eceb78cf48a3fae3db03751f45961e8c9d15b928fa94",
+      "nonce": 19,
+      "fee_rate": "721609",
+      "sender_address": "SP18PBAS0WZCBFKA1D5T846JYJYR0GPM2KFPZ42MF",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "fungible",
+          "condition_code": "sent_equal_to",
+          "amount": "25000",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP18PBAS0WZCBFKA1D5T846JYJYR0GPM2KFPZ42MF"
+          },
+          "asset": {
+            "contract_name": "newyorkcitycoin-token",
+            "asset_name": "newyorkcitycoin",
+            "contract_address": "SP2H8PY27SEZ03MWRKS5XABZYQN17ETGQS3527SA5"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 1,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 2,
+      "events": [],
+      "execution_cost_read_count": 61,
+      "execution_cost_read_length": 42596,
+      "execution_cost_runtime": 96181000,
+      "execution_cost_write_count": 10,
+      "execution_cost_write_length": 1049,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP2H8PY27SEZ03MWRKS5XABZYQN17ETGQS3527SA5.newyorkcitycoin-core-v1",
+        "function_name": "stack-tokens",
+        "function_signature": "(define-public (stack-tokens (amountTokens uint) (lockPeriod uint)))",
+        "function_args": [
+          {
+            "hex": "0x01000000000000000000000000000061a8",
+            "repr": "u25000",
+            "name": "amountTokens",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000004",
+            "repr": "u4",
+            "name": "lockPeriod",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x5bb8ab4a0e8ae85aa5f1942253d62bbd103c5a1007358aa6697529bde6888c1a",
+      "nonce": 1392,
+      "fee_rate": "100000",
+      "sender_address": "SP3DW8X8CBPSYWT327120KE5N8DEJTTBMYJ2QH68Y",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 0,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0xdd135c2ec4efe6f5c2ec41aceffd147593e0c07b56830b80e388aa9fe962bf55",
+      "microblock_sequence": 1,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SP11RF58JMAAHPPJ115ZFEXF88GPXCZ13YKZFH90F",
+        "amount": "38870000",
+        "memo": "0x446965676f0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0x05ad36d652512f717d76c41311ec22c95dce086a101c92264f0154b9df732ed8",
+      "nonce": 2943,
+      "fee_rate": "180",
+      "sender_address": "SP33XEHK2SXXH625VG6W6665WBBPX1ENQVKNEYCYY",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 0,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x9efb2aa98443b4b67287b14fc0566749fc12ad7825ee9358470e21efdc57ac51",
+      "microblock_sequence": 2,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SP26K27ESYDQ2Y4CERWZD55ST0QA60VTCNA7NF7AA",
+        "amount": "88000000",
+        "memo": "0x00000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0x5e8cacf0181a9aa231c6cd6b0f94a0efd566208d04bb16ba50985a07883cc2ed",
+      "nonce": 280,
+      "fee_rate": "7240",
+      "sender_address": "SP3EYT7KF5ERWQFTWW3SWHS8QRYBNSMRZ7JW73YXR",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 4,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SP24GRMRYV61X68KZWP2EVEH5X632GSF6WV9MSR1E",
+        "amount": "5000000",
+        "memo": "0x00000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0xd4e3c98f02e6c44846c3ed0e753a98c76809fc706c476b710fbf1a349c318e34",
+      "nonce": 69,
+      "fee_rate": "257270",
+      "sender_address": "SP1T40XRDPSWB1SWKJQREWRM31NDRAN169JW11MTE",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 5,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SPSE46JAQE9DDSNME20SGN1ZRE76ME8WHKJQJWNS",
+        "amount": "5000000",
+        "memo": "0x00000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0x24d893b6c0c069ce59b16db1ccccf275ff764d8690fc3d085708b042408ed5f4",
+      "nonce": 2,
+      "fee_rate": "498",
+      "sender_address": "SP3G1KBEDKHAZVB7KZ18F9G3XY8Z5AY12C3YJ5EPE",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 6,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SP362NSJN5TDE49RTTQ0K6TQZC3AV4DTFH6N6HKTW",
+        "amount": "18220501",
+        "memo": "0x00000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0xb74edcb4bfceec3e0b4b8dc03276614cb122c5916d6a9fd01135861d1a8099ef",
+      "nonce": 72,
+      "fee_rate": "7240",
+      "sender_address": "SP373X2PQ9PP33B182SPX0KXEB18NAQN3KJ1WMYV5",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 7,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SP270FSC11XJTT0WQ0MM4JHVZF780CAMN4VCRYQNJ",
+        "amount": "100000",
+        "memo": "0x00000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0xfec9de099fc5f1fd688ab9457328937344232f876f4d9ea3ff9f0489997f1659",
+      "nonce": 1670,
+      "fee_rate": "180",
+      "sender_address": "SPX4AYBXQN95DN1EQRPMM5GKPPDD0BFE8V3XDW64",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 8,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SP3HXJJMJQ06GNAZ8XWDN1QM48JEDC6PP6W3YZPZJ",
+        "amount": "1098523784",
+        "memo": "0x31313233393000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0x9daafa28177629be04ae3176375f041e595aa8e5d5ad811493a822b4305fab58",
+      "nonce": 877,
+      "fee_rate": "180",
+      "sender_address": "SP3JCYESW7RAR80Q33KGW93V5CDC60VJP9FBM2A9C",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 9,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "0x3f4c4bf97baaa69db5a844093e1d925166627be68c0ba673f9a822116a525856",
+      "microblock_sequence": 0,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "token_transfer",
+      "token_transfer": {
+        "recipient_address": "SP3HXJJMJQ06GNAZ8XWDN1QM48JEDC6PP6W3YZPZJ",
+        "amount": "1038527092",
+        "memo": "0x39373539300000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0xa7f9c276598c2fd1a26be805bdd990cf99f65fd280efabc0fe697e7fbc76519d",
+      "nonce": 4277,
+      "fee_rate": "0",
+      "sender_address": "SP1R7EKK639BRCMJ3R1KC1RM7M0CF0X4S5ACNYSRE",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "on_chain_only",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 0,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 0,
+      "events": [],
+      "execution_cost_read_count": 0,
+      "execution_cost_read_length": 0,
+      "execution_cost_runtime": 0,
+      "execution_cost_write_count": 0,
+      "execution_cost_write_length": 0,
+      "tx_type": "coinbase",
+      "coinbase_payload": {
+        "data": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "tx_id": "0x2a54950d23fdfdae5cc9e6f80bb361ad27c26b32b9f6f763153cc90fec0b5cf3",
+      "nonce": 451,
+      "fee_rate": "68782",
+      "sender_address": "SP2HVP68NY5BD2RDFX0JNXSYRS8AA6R7S30N08NJZ",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "not_sent",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP2HVP68NY5BD2RDFX0JNXSYRS8AA6R7S30N08NJZ"
+          },
+          "asset": {
+            "contract_name": "boom-nfts",
+            "asset_name": "boom",
+            "contract_address": "SP497E7RX3233ATBS2AB9G4WTHB63X5PBSP5VGAQ"
+          },
+          "asset_value": {
+            "hex": "0x0100000000000000000000000000002220",
+            "repr": "u8736"
+          }
+        },
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "marketplace-v2-alt",
+            "address": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S"
+          },
+          "asset": {
+            "contract_name": "boom-nfts",
+            "asset_name": "boom",
+            "contract_address": "SP497E7RX3233ATBS2AB9G4WTHB63X5PBSP5VGAQ"
+          },
+          "asset_value": {
+            "hex": "0x0100000000000000000000000000002220",
+            "repr": "u8736"
+          }
+        },
+        {
+          "type": "stx",
+          "condition_code": "sent_less_than_or_equal_to",
+          "amount": "1455000000",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP2HVP68NY5BD2RDFX0JNXSYRS8AA6R7S30N08NJZ"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 1,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 3,
+      "events": [],
+      "execution_cost_read_count": 11,
+      "execution_cost_read_length": 14066,
+      "execution_cost_runtime": 17148000,
+      "execution_cost_write_count": 4,
+      "execution_cost_write_length": 218,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S.marketplace-v2-alt",
+        "function_name": "purchase-asset",
+        "function_signature": "(define-public (purchase-asset (tradables principal) (tradable-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x06160893b8f8e8c431ab4bc894b4c09cd45661f4b65e09626f6f6d2d6e667473",
+            "repr": "SP497E7RX3233ATBS2AB9G4WTHB63X5PBSP5VGAQ.boom-nfts",
+            "name": "tradables",
+            "type": "principal"
+          },
+          {
+            "hex": "0x0100000000000000000000000000002220",
+            "repr": "u8736",
+            "name": "tradable-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xb1ce2d437cb677999c67d77184ccab1aca7c2dbf172b26aae0d292b82f691963",
+      "nonce": 78,
+      "fee_rate": "1000000",
+      "sender_address": "SP24NTWPNJWJ365B8JVJACF610301S5K41MK7WY8G",
+      "sponsored": false,
+      "post_condition_mode": "allow",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 2,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x070b00000002010000000000000000000000002982e68d010000000000000000000000004e7316a0",
+        "repr": "(ok (list u696444557 u1316165280))"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 10,
+      "events": [],
+      "execution_cost_read_count": 38,
+      "execution_cost_read_length": 74198,
+      "execution_cost_runtime": 89498000,
+      "execution_cost_write_count": 8,
+      "execution_cost_write_length": 985,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-swap-v2-1",
+        "function_name": "reduce-position",
+        "function_signature": "(define-public (reduce-position (token-x-trait trait_reference) (token-y-trait trait_reference) (swap-token-trait trait_reference) (percent uint)))",
+        "function_args": [
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a511777261707065642d7374782d746f6b656e",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.wrapped-stx-token",
+            "name": "token-x-trait",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a50a757364612d746f6b656e",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.usda-token",
+            "name": "token-y-trait",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a51d61726b6164696b6f2d737761702d746f6b656e2d777374782d75736461",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-swap-token-wstx-usda",
+            "name": "swap-token-trait",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000064",
+            "repr": "u100",
+            "name": "percent",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x7754fac5b26c693c02c670a295837a4b4b0b229378b545cd7a02c298b542bbbf",
+      "nonce": 11,
+      "fee_rate": "750000",
+      "sender_address": "SP2JFT6JN83RV05S18W04B41Y6R8K88DHS0PPQTXC",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 3,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x070c0000000305636f756e740100000000000000000000000000000001036964730b000000010100000000000000000000000000002223097365726965732d69640100000000000000000000000000000abb",
+        "repr": "(ok (tuple (count u1) (ids (list u8739)) (series-id u2747)))"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 12,
+      "execution_cost_read_length": 10365,
+      "execution_cost_runtime": 66163000,
+      "execution_cost_write_count": 6,
+      "execution_cost_write_length": 5840,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP497E7RX3233ATBS2AB9G4WTHB63X5PBSP5VGAQ.boom-nfts",
+        "function_name": "mint-series",
+        "function_signature": "(define-public (mint-series (creator principal) (creator-name (optional (tuple (name (buff 48)) (namespace (buff 20))))) (existing-series-id (optional uint)) (series-name (string-utf8 80)) (series-uri (string-ascii 2048)) (series-mime-type (string-ascii 129)) (copies (list 10 (tuple (hash (buff 64)) (mime-type (string-ascii 129)) (name (string-utf8 80)) (number uint) (uri (string-ascii 2048)))))))",
+        "function_args": [
+          {
+            "hex": "0x0516a4fd1a5540f1b01721470045903e36113421b1c8",
+            "repr": "SP2JFT6JN83RV05S18W04B41Y6R8K88DHS0PPQTXC",
+            "name": "creator",
+            "type": "principal"
+          },
+          {
+            "hex": "0x09",
+            "repr": "none",
+            "name": "creator-name",
+            "type": "(optional (tuple (name (buff 48)) (namespace (buff 20))))"
+          },
+          {
+            "hex": "0x09",
+            "repr": "none",
+            "name": "existing-series-id",
+            "type": "(optional uint)"
+          },
+          {
+            "hex": "0x0e000000124d656761706f6e7420417065202335333020",
+            "repr": "u\"Megapont Ape #530 \"",
+            "name": "series-name",
+            "type": "(string-utf8 80)"
+          },
+          {
+            "hex": "0x0d0000006f68747470733a2f2f626f6f6d2d6e66742d34313336396236362d333664612d343434322d626536302d6666663664373535623036352e73332e616d617a6f6e6177732e636f6d2f32623230633563632d316264352d343937342d616332362d3564663931636466393033352e706e67",
+            "repr": "\"https://boom-nft-41369b66-36da-4442-be60-fff6d755b065.s3.amazonaws.com/2b20c5cc-1bd5-4974-ac26-5df91cdf9035.png\"",
+            "name": "series-uri",
+            "type": "(string-ascii 2048)"
+          },
+          {
+            "hex": "0x0d00000009696d6167652f706e67",
+            "repr": "\"image/png\"",
+            "name": "series-mime-type",
+            "type": "(string-ascii 129)"
+          },
+          {
+            "hex": "0x0b000000010c00000005046861736802000000209a6ee69143cb55d8dd3008b1d1416bd210bc426bd34b0794978b4969b7249167096d696d652d747970650d00000009696d6167652f706e67046e616d650e000000154d656761706f6e7420417065202335333020202331066e756d6265720100000000000000000000000000000001037572690d0000006f68747470733a2f2f626f6f6d2d6e66742d34313336396236362d333664612d343434322d626536302d6666663664373535623036352e73332e616d617a6f6e6177732e636f6d2f32623230633563632d316264352d343937342d616332362d3564663931636466393033352e706e67",
+            "repr": "(list (tuple (hash 0x9a6ee69143cb55d8dd3008b1d1416bd210bc426bd34b0794978b4969b7249167) (mime-type \"image/png\") (name u\"Megapont Ape #530  #1\") (number u1) (uri \"https://boom-nft-41369b66-36da-4442-be60-fff6d755b065.s3.amazonaws.com/2b20c5cc-1bd5-4974-ac26-5df91cdf9035.png\")))",
+            "name": "copies",
+            "type": "(list 10 (tuple (hash (buff 64)) (mime-type (string-ascii 129)) (name (string-utf8 80)) (number uint) (uri (string-ascii 2048))))"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x877becffd9ad1138437fc8d9765a2fd6121f11c65254bf85036ecaa1ddec1cbe",
+      "nonce": 18,
+      "fee_rate": "750000",
+      "sender_address": "SP3KW1JVCDNEVKN3JR4TGSCS9FW1T403WAH8BFNWN",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "marketplace-v4",
+            "address": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S"
+          },
+          "asset": {
+            "contract_name": "megapont-ape-club-nft",
+            "asset_name": "Megapont-Ape-Club",
+            "contract_address": "SP3D6PV2ACBPEKYJTCMH7HEN02KP87QSP8KTEH335"
+          },
+          "asset_value": {
+            "hex": "0x01000000000000000000000000000003f0",
+            "repr": "u1008"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 4,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 1,
+      "events": [],
+      "execution_cost_read_count": 15,
+      "execution_cost_read_length": 34279,
+      "execution_cost_runtime": 38909000,
+      "execution_cost_write_count": 4,
+      "execution_cost_write_length": 546,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S.marketplace-v4",
+        "function_name": "unlist-asset",
+        "function_signature": "(define-public (unlist-asset (tradables trait_reference) (tradable-id uint)))",
+        "function_args": [
+          {
+            "hex": "0x0616da6b6c4a62ece9fa5a652278baa014ec83df3644156d656761706f6e742d6170652d636c75622d6e6674",
+            "repr": "SP3D6PV2ACBPEKYJTCMH7HEN02KP87QSP8KTEH335.megapont-ape-club-nft",
+            "name": "tradables",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x01000000000000000000000000000003f0",
+            "repr": "u1008",
+            "name": "tradable-id",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x49a442002b339768d116f61e8cbf0f83503707c4fa99e8ee734f6b9842ce6f5d",
+      "nonce": 60,
+      "fee_rate": "465777",
+      "sender_address": "SPJZGGV74XKFDJE3ANKW8VGKRGM7BAFGH1Z6AYFR",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 5,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x070100000000000000000000000004f5cc0c",
+        "repr": "(ok u83217420)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 2,
+      "events": [],
+      "execution_cost_read_count": 78,
+      "execution_cost_read_length": 117598,
+      "execution_cost_runtime": 133658000,
+      "execution_cost_write_count": 5,
+      "execution_cost_write_length": 299,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-stake-registry-v1-1",
+        "function_name": "claim-pending-rewards",
+        "function_signature": "(define-public (claim-pending-rewards (registry-trait trait_reference) (pool-trait trait_reference)))",
+        "function_args": [
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a51c61726b6164696b6f2d7374616b652d72656769737472792d76312d31",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-stake-registry-v1-1",
+            "name": "registry-trait",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a52261726b6164696b6f2d7374616b652d706f6f6c2d64696b6f2d757364612d76312d31",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-stake-pool-diko-usda-v1-1",
+            "name": "pool-trait",
+            "type": "trait_reference"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x53f9341eeb3474d4979c5c30b451292a319526878d261a6b0ef56d2083c4529e",
+      "nonce": 232,
+      "fee_rate": "241057",
+      "sender_address": "SP1P9BFR12MB5BE3KDZSC97XHHPQ3SP76Q1K4BQ82",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "stx",
+          "condition_code": "sent_equal_to",
+          "amount": "1100000000",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "stx-ft-swap-v1",
+            "address": "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9"
+          }
+        },
+        {
+          "type": "fungible",
+          "condition_code": "sent_equal_to",
+          "amount": "24444",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP1P9BFR12MB5BE3KDZSC97XHHPQ3SP76Q1K4BQ82"
+          },
+          "asset": {
+            "contract_name": "newyorkcitycoin-token",
+            "asset_name": "newyorkcitycoin",
+            "contract_address": "SP2H8PY27SEZ03MWRKS5XABZYQN17ETGQS3527SA5"
+          }
+        },
+        {
+          "type": "stx",
+          "condition_code": "sent_equal_to",
+          "amount": "11000000",
+          "principal": {
+            "type_id": "principal_contract",
+            "contract_name": "stx-ft-swap-v1-fixed-fees",
+            "address": "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 6,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 5,
+      "events": [],
+      "execution_cost_read_count": 18,
+      "execution_cost_read_length": 12884,
+      "execution_cost_runtime": 73796000,
+      "execution_cost_write_count": 5,
+      "execution_cost_write_length": 789,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.stx-ft-swap-v1",
+        "function_name": "submit-swap",
+        "function_signature": "(define-public (submit-swap (id uint) (ft trait_reference) (fees trait_reference)))",
+        "function_args": [
+          {
+            "hex": "0x0100000000000000000000000000000064",
+            "repr": "u100",
+            "name": "id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0616a28b7847cbbe01d3989e4bd52ffebd42776a17c8156e6577796f726b63697479636f696e2d746f6b656e",
+            "repr": "SP2H8PY27SEZ03MWRKS5XABZYQN17ETGQS3527SA5.newyorkcitycoin-token",
+            "name": "ft",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0616aca5a9e97e952f55ff8a47d7555243f7e4a718a1197374782d66742d737761702d76312d66697865642d66656573",
+            "repr": "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.stx-ft-swap-v1-fixed-fees",
+            "name": "fees",
+            "type": "trait_reference"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0xa20a329a9e39f6c803fe476e673413ab8de58e709e19fba37767e6ae1a3ea84f",
+      "nonce": 974,
+      "fee_rate": "200000",
+      "sender_address": "SP3SKH6YB515J76KVDHDHBTE2GQ4CV6QJHC5GJKRF",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "non_fungible",
+          "condition_code": "sent",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP3SKH6YB515J76KVDHDHBTE2GQ4CV6QJHC5GJKRF"
+          },
+          "asset": {
+            "contract_name": "stacks-pops",
+            "asset_name": "stacks-pops",
+            "contract_address": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG"
+          },
+          "asset_value": {
+            "hex": "0x0100000000000000000000000000000a05",
+            "repr": "u2565"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 7,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 2,
+      "events": [],
+      "execution_cost_read_count": 114,
+      "execution_cost_read_length": 108525,
+      "execution_cost_runtime": 279434000,
+      "execution_cost_write_count": 6,
+      "execution_cost_write_length": 80754,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-art-market-v2",
+        "function_name": "list-item",
+        "function_signature": "(define-public (list-item (collection trait_reference) (collection-id uint) (item-id uint) (price uint)))",
+        "function_args": [
+          {
+            "hex": "0x061625c0f5c23a3d463bd4ead1f7c2548a3fb529cdb00b737461636b732d706f7073",
+            "repr": "SPJW1XE278YMCEYMXB8ZFGJMH8ZVAAEDP2S2PJYG.stacks-pops",
+            "name": "collection",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000003",
+            "repr": "u3",
+            "name": "collection-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000000000a05",
+            "repr": "u2565",
+            "name": "item-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000000e4e1c0",
+            "repr": "u15000000",
+            "name": "price",
+            "type": "uint"
+          }
+        ]
+      }
+    },
+    {
+      "tx_id": "0x098755bc75e0ebaf740077a3a3899718a7bb19933a784b71da16a0cd403ff748",
+      "nonce": 75,
+      "fee_rate": "750000",
+      "sender_address": "SP1EVTVMRKYXYV04HJH3XJPHK5Z540M8AGK8Y2FE4",
+      "sponsored": false,
+      "post_condition_mode": "deny",
+      "post_conditions": [
+        {
+          "type": "fungible",
+          "condition_code": "sent_less_than_or_equal_to",
+          "amount": "681451648",
+          "principal": {
+            "type_id": "principal_standard",
+            "address": "SP1EVTVMRKYXYV04HJH3XJPHK5Z540M8AGK8Y2FE4"
+          },
+          "asset": {
+            "contract_name": "usda-token",
+            "asset_name": "usda",
+            "contract_address": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR"
+          }
+        }
+      ],
+      "anchor_mode": "any",
+      "is_unanchored": false,
+      "block_hash": "0x19f0868efbdf2e7e0a2c7c2137950f8f12a70a5cf20b708726b28c4ef9312387",
+      "parent_block_hash": "0x9b8fb9eb359cac96b5d6500d88994c96285d08bbb2c535e3443815eb64117b24",
+      "block_height": 39538,
+      "burn_block_time": 1638122820,
+      "burn_block_time_iso": "2021-11-28T18:07:00.000Z",
+      "parent_burn_block_time": 1638122506,
+      "parent_burn_block_time_iso": "2021-11-28T18:01:46.000Z",
+      "canonical": true,
+      "tx_index": 8,
+      "tx_status": "success",
+      "tx_result": {
+        "hex": "0x0703",
+        "repr": "(ok true)"
+      },
+      "microblock_hash": "",
+      "microblock_sequence": 2147483647,
+      "microblock_canonical": true,
+      "event_count": 5,
+      "events": [],
+      "execution_cost_read_count": 109,
+      "execution_cost_read_length": 297749,
+      "execution_cost_runtime": 337811000,
+      "execution_cost_write_count": 7,
+      "execution_cost_write_length": 3677,
+      "tx_type": "contract_call",
+      "contract_call": {
+        "contract_id": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-freddie-v1-1",
+        "function_name": "burn",
+        "function_signature": "(define-public (burn (vault-id uint) (debt uint) (reserve trait_reference) (ft trait_reference) (coll-type trait_reference)))",
+        "function_args": [
+          {
+            "hex": "0x0100000000000000000000000000000609",
+            "repr": "u1545",
+            "name": "vault-id",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0100000000000000000000000028853000",
+            "repr": "u679817216",
+            "name": "debt",
+            "type": "uint"
+          },
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a51961726b6164696b6f2d7374782d726573657276652d76312d31",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-stx-reserve-v1-1",
+            "name": "reserve",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a50e61726b6164696b6f2d746f6b656e",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-token",
+            "name": "ft",
+            "type": "trait_reference"
+          },
+          {
+            "hex": "0x0616982f3ec112a5f5928a5c96a914bd733793b896a51e61726b6164696b6f2d636f6c6c61746572616c2d74797065732d76312d31",
+            "repr": "SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-collateral-types-v1-1",
+            "name": "coll-type",
+            "type": "trait_reference"
+          }
+        ]
+      }
+    }
+  ],
+  "total": 31
+}
