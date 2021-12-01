@@ -23,10 +23,14 @@ RELAY_FEE_PER_BYTE = 1
 
 WEIGHTED_QUANTILES = "WEIGHTED_QUANTILES"
 UNWEIGHTED_QUANTILES = "UNWEIGHTED_QUANTILES"
-
 FILL_WITH_RELAY_FEE = "FILL_WITH_RELAY_FEE"
 
-METHODS = [ WEIGHTED_QUANTILES, FILL_WITH_RELAY_FEE ]
+ESTIMATE_EXP_WINDOW = "ESTIMATE_EXP_WINDOW"
+EXP_DECAY = 0.5
+ESTIMATE_MEDIAN_WINDOW = "ESTIMATE_MEDIAN_WINDOW"
+WINDOW_SIZE = 5
+
+METHODS = [ WEIGHTED_QUANTILES, FILL_WITH_RELAY_FEE, ] # ESTIMATE_EXP_WINDOW ]
 
 
 with open('./transactions.json') as f:
@@ -85,9 +89,42 @@ def weighted_quantiles(values, weights, req_percentiles):
         outputted_values.append(v)
     return outputted_values
 
+def simulate_estimator(block_stats):
+    state = None
+
+    log = []
+    for (block, (low, middle, high)) in block_stats:
+        if ESTIMATE_EXP_WINDOW in METHODS:
+            if state is None:
+                state = (low, middle, high)
+            else:
+                state = (state[0] * EXP_DECAY + (low * (1-EXP_DECAY)),
+                         state[1] * EXP_DECAY + (middle * (1-EXP_DECAY)),
+                         state[2] * EXP_DECAY + (high * (1-EXP_DECAY)))
+            log.append((block, state))
+        elif ESTIMATE_MEDIAN_WINDOW in METHODS:
+            if state is None:
+                state = ([low], [middle], [high])
+            else:
+                if len(state[0]) >= WINDOW_SIZE:
+                    state[0].pop(0)
+                    state[1].pop(0)
+                    state[2].pop(0)
+                state[0].append(low)
+                state[1].append(middle)
+                state[2].append(high)
+            log.append((block, (statistics.median(state[0]),
+                                statistics.median(state[1]),
+                                statistics.median(state[2]))))
+        else:
+            raise "No estimator behavior specified"
+
+    return log
+
+
 def main(start_block, end_block):
     results = {}
-    block_stats = {}
+    block_stats = []
     max_fee_rate = 0
     max_fee_rate_type = ""
 
@@ -133,7 +170,7 @@ def main(start_block, end_block):
 
             if WEIGHTED_QUANTILES in METHODS:
                 quants = weighted_quantiles(block_fee_rates, block_metrics, [0.05, 0.5, .95])
-                block_stats[block] = (quants[0], quants[1], quants[2])
+                block_stats.append((block, (quants[0], quants[1], quants[2])))
             elif UNWEIGHTED_QUANTILES in METHODS:
                 highest_index = len(block_fee_rates) - max(1, int(len(block_fee_rates) / 20))
                 median_index = int(len(block_fee_rates) / 2)
@@ -144,9 +181,14 @@ def main(start_block, end_block):
                 high = block_fee_rates[highest_index]
                 low = block_fee_rates[lowest_index]
                 median = block_fee_rates[median_index]
-                block_stats[block] = (low, median, high)
+                block_stats.append((block, (low, median, high)))
             else:
                 raise "No quantile method specified"
+
+    block_stats.sort()
+    print()
+    print(" METHODS: %s" % METHODS)
+    print()
 
     print()
     print(" ==== MAX FEE RATE TX ====")
@@ -178,7 +220,7 @@ def main(start_block, end_block):
     max_middle = (0, None)
     max_high = (0, None)
     max_low = (0, None)
-    for (b, bstat) in block_stats.items():
+    for (b, bstat) in block_stats:
         high = bstat[2]
         low = bstat[0]
         median = bstat[1]
@@ -189,38 +231,52 @@ def main(start_block, end_block):
         if low > max_low[0]:
             max_low = (low, (b, low, median, high))
 
-    print()
-    print(" ==== BLOCK STATS ====")
-    print()
-    for (b, bstat) in block_stats.items():
-        low = bstat[0]
-        median = bstat[1]
-        high = bstat[2]
-        print("%s, %f, %f, %f" % (b, low, median, high))
+    if ESTIMATE_EXP_WINDOW in METHODS or ESTIMATE_MEDIAN_WINDOW in METHODS:
+        print()
+        print(" ==== ESTIMATOR STATS ====")
+        print()
 
-    print()
-    print(" ==== MAX HIGH BLOCK ====")
-    print("%s, %f, %f, %f" % max_high[1])
-    print(" ==== MAX MIDDLE BLOCK ====")
-    print("%s, %f, %f, %f" % max_middle[1])
-    print(" ==== MAX LOW BLOCK ====")
-    print("%s, %f, %f, %f" % max_low[1])
-    print()
-    print(" ==== Implied stack-stx cost ====")
-    print()
-    stack_stx_multiple = 380.0 / MICROSTACKS_PER_STACKS
-    print("%s, %f, %f, %f" % (max_high[1][0],
-                              max_high[1][1] * stack_stx_multiple,
-                              max_high[1][2] * stack_stx_multiple,
-                              max_high[1][3] * stack_stx_multiple))
-    print("%s, %f, %f, %f" % (max_middle[1][0],
-                              max_middle[1][1] * stack_stx_multiple,
-                              max_middle[1][2] * stack_stx_multiple,
-                              max_middle[1][3] * stack_stx_multiple))
-    print("%s, %f, %f, %f" % (max_low[1][0],
-                              max_low[1][1] * stack_stx_multiple,
-                              max_low[1][2] * stack_stx_multiple,
-                              max_low[1][3] * stack_stx_multiple))
+        estimator_log = simulate_estimator(block_stats)
+        for (b, bstat) in estimator_log:
+            low = bstat[0]
+            median = bstat[1]
+            high = bstat[2]
+            print("%s, %f, %f, %f" % (b, low, median, high))
+    else:
+        print()
+        print(" ==== BLOCK STATS ====")
+        print()
+        for (b, bstat) in block_stats:
+            low = bstat[0]
+            median = bstat[1]
+            high = bstat[2]
+            print("%s, %f, %f, %f" % (b, low, median, high))
+
+    # print()
+    # print(" ==== MAX HIGH BLOCK ====")
+    # print("%s, %f, %f, %f" % max_high[1])
+    # print(" ==== MAX MIDDLE BLOCK ====")
+    # print("%s, %f, %f, %f" % max_middle[1])
+    # print(" ==== MAX LOW BLOCK ====")
+    # print("%s, %f, %f, %f" % max_low[1])
+    # print()
+    # print(" ==== Implied stack-stx cost ====")
+    # print()
+    # stack_stx_multiple = 380.0 / MICROSTACKS_PER_STACKS
+    # print("%s, %f, %f, %f" % (max_high[1][0],
+    #                           max_high[1][1] * stack_stx_multiple,
+    #                           max_high[1][2] * stack_stx_multiple,
+    #                           max_high[1][3] * stack_stx_multiple))
+    # print("%s, %f, %f, %f" % (max_middle[1][0],
+    #                           max_middle[1][1] * stack_stx_multiple,
+    #                           max_middle[1][2] * stack_stx_multiple,
+    #                           max_middle[1][3] * stack_stx_multiple))
+    # print("%s, %f, %f, %f" % (max_low[1][0],
+    #                           max_low[1][1] * stack_stx_multiple,
+    #                           max_low[1][2] * stack_stx_multiple,
+    #                           max_low[1][3] * stack_stx_multiple))
+
+
     print()
 
 main(int(sys.argv[1]), int(sys.argv[2]))
